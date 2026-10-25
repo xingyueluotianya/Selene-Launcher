@@ -1,0 +1,79 @@
+name: Bug 报告
+description: 报告可复现的启动器故障或兼容性问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请勿粘贴密码、Token、账号配置、凭据密钥或未脱敏的诊断包。
+  - type: input
+    id: version
+    attributes:
+      label: Selene Launcher 版本
+      placeholder: 例如 0.2.0-beta.9
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: 操作系统
+      placeholder: 例如 Windows 11 23H2 x64
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题范围
+      options:
+        - 启动器无法启动
+        - 原版安装或下载
+        - Fabric
+        - Forge
+        - NeoForge
+        - 账号登录
+        - Modrinth 或整合包
+        - 实例或模组管理
+        - 游戏启动
+        - 视觉或界面
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请按顺序列出能稳定触发问题的步骤。
+      placeholder: |
+        1. 打开……
+        2. 选择……
+        3. 点击……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 脱敏日志
+      description: 可粘贴异常链最底部或拖入已脱敏日志。请删除个人路径、服务器地址和会话信息。
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索现有 Issue，未发现相同问题
+          required: true
+        - label: 我确认内容中不含密码、Token、账号配置或凭据密钥
+          required: true

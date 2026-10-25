@@ -1,0 +1,47 @@
+name: 功能建议
+description: 提议新的功能、交互或兼容性改进
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 要解决的问题
+      description: 请描述用户现在遇到的困难，而不只是功能名称。
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 期望方案
+      description: 描述建议的操作流程和结果。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 可接受的替代方案
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及范围
+      options:
+        - 下载与安装
+        - Fabric/Forge/NeoForge
+        - 账号
+        - 实例与模组
+        - Modrinth/整合包
+        - 游戏启动
+        - 设置与存储
+        - 视觉与界面
+        - 诊断与安全
+        - 其他
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索现有 Issue 和路线图
+          required: true
