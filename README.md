@@ -2,9 +2,9 @@
 
 > 面向 Minecraft Java Edition 的现代 Windows 桌面启动器。
 
-![Selene Launcher 宣传封面](media/promo/cover.png)
-
 Selene Launcher 使用 Java 21 与 JavaFX 构建，覆盖游戏与加载器安装、实例管理、账号、Modrinth 资源、整合包导入、下载恢复、故障诊断和便携式 Windows 分发。
+ai支持来源于鱼某人的aimod平台——automods（https://automods.cn）
+由于该平台主要以制作mod为目的，所以该项目似乎错误的编译了jar
 
 **当前版本：`0.2.0-beta.9`**
 
@@ -30,13 +30,11 @@ Selene Launcher 使用 Java 21 与 JavaFX 构建，覆盖游戏与加载器安�
 1. 在 GitHub 仓库右侧 **Releases** 中下载 `Selene-Launcher-0.2.0-beta.9-windows-x64.zip`。
 2. 完整解压 ZIP，不要只复制 `SeleneLauncher.exe`。
 3. 双击 `SeleneLauncher.exe`。
-4. 若窗口无法启动，运行同目录的 `SeleneLauncher-Diagnostic.cmd`，并查看生成的 `SeleneLauncher-startup-check.log` 或 `startup-failure.log`。
-
-便携包中的 `runtime/`、`lib/`、`SeleneLauncher.jar` 与 EXE 必须保持原有相对位置。当前 EXE 未进行商业代码签名，Windows SmartScreen 可能提示“未知发布者”。
+4. 若窗口无法启动，运行同目录的 `SeleneLauncher-Diagnostic.cmd`，并查看生成的 `SeleneLauncher-startup-check.log` 或 `startup-failure.log`。并在进行排查后交与开发者。
 
 ## 基本流程
 
-1. 在“账号中心”添加离线、Microsoft 或 Yggdrasil 账号。
+1. 在“账号中心”添加离线、Microsoft 或 第三方登录 账号。
 2. 在“版本安装”选择 Minecraft 版本及原版/Fabric/Forge/NeoForge。
 3. 在“下载中心”查看、暂停或恢复安装任务。
 4. 在“实例管理”配置游戏、管理模组并启动实例。
@@ -48,8 +46,6 @@ Selene Launcher 使用 Java 21 与 JavaFX 构建，覆盖游戏与加载器安�
 | 系统 | 默认目录 |
 |---|---|
 | Windows | `%APPDATA%/SeleneLauncher` |
-| macOS | `~/Library/Application Support/SeleneLauncher` |
-| Linux | `~/.local/share/selene-launcher` |
 
 当前公开交付物以 Windows x64 为主。下载缓存、版本实例、Minecraft 公共文件和托管 Java 均可在首次启动或设置页改到其他磁盘。修改后需重启；启动器不会静默搬运旧文件。
 
